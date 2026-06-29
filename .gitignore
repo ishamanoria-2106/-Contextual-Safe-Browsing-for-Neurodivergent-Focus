@@ -1,0 +1,9 @@
+# Git internals
+.git
+
+# Node dependencies
+/server/node_modules
+
+# Environment variables — NEVER commit this
+server/.env
+.env

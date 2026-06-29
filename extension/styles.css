@@ -1,0 +1,173 @@
+/* BLUR EFFECT */
+.fg-blur {
+  filter: blur(8px) !important;
+  transition: filter 0.3s ease;
+}
+
+.fg-blur img,
+.fg-blur video,
+.fg-blur picture {
+  filter: blur(8px) !important;
+}
+
+/* CONTROL PANEL */
+.fg-control-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #0f172a;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 999999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* BUTTONS */
+.fg-btn {
+  background: teal;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  margin-left: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fg-btn:hover {
+  background: #14b8a6;
+}
+/* GLOBAL */
+.pop-up-fl
+ {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617; /* black */
+  color: white;
+}
+
+/* CONTAINER */
+.con-box {
+  padding: 15px;
+}
+
+/* TITLE */
+.head-foc{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #14b8a6; /* teal */
+}
+
+/* SECTION */
+.sec-swi {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+label {
+  font-size: 12px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+/* INPUTS */
+input, select {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #0f172a;
+  color: white;
+}
+
+/* BUTTON */
+.but-on {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #14b8a6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.but-on:hover {
+  background: #0d9488;
+}
+
+/* TOGGLE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #334155;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #14b8a6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* INLINE FLEX FOR TOGGLE */
+.section:first-child {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  margin-left: 10px;
+}
+
+/* TIMER HIDDEN */
+#timerContainer {
+  display: none;
+}
+/* 🚫 NEVER BLUR NAVBAR / SEARCH BAR */
+nav, header, [role="navigation"], [role="search"], form {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Also protect children inside navbar */
+nav *, header *, [role="navigation"] *, [role="search"] *, form * {
+  filter: none !important;
+}
